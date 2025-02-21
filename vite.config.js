@@ -4,13 +4,11 @@ import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
-  plugins: [vue()], // ✅ Vue plugin correctly placed
+  plugins: [vue()],
   css: {
     postcss: {
-      plugins: [
-        tailwindcss,  // ✅ Tailwind plugin correctly placed
-        autoprefixer, // ✅ Autoprefixer correctly placed
-      ],
+      plugins: [tailwindcss, autoprefixer],
     },
   },
+  base: process.env.NODE_ENV === 'production' ? '/portfolio/' : '/',
 });
