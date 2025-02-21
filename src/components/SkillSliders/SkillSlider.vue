@@ -1,5 +1,5 @@
 <template>
-    <div class="flex bg-background justify-center items-center h-[380px] w-full">
+    <div id="skills" class="flex bg-background justify-center items-center h-[380px] w-full">
       <div class="flex space-x-2 justify-center w-full max-w-6xl py-10">
         <NumberChart />
 
@@ -21,7 +21,6 @@
   import JavaScriptSlider from "./JavaScriptSlider.vue"; 
   import WordpressSlider from "./WordpressSlider.vue"; 
   import WebflowSlider from "./WebflowSlider.vue"; 
-  import ChartSlider from "./ChartSlider.vue";
   import NumberChart from "./NumberChart.vue";
 
 

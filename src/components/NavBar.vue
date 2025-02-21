@@ -38,8 +38,9 @@
   const links = ref([
     { id: 1, text: "Home", href: "#home" },
     { id: 2, text: "About", href: "#about" },
-    { id: 3, text: "Projects", href: "#projects" },
-    { id: 4, text: "Contact", href: "#contact" },
+    { id: 3, text: "Skills", href: "#skills" },
+    { id: 4, text: "Projects", href: "#projects" },
+    { id: 5, text: "Contact", href: "#contact" },
   ]);
   
   // Mobile Menu State

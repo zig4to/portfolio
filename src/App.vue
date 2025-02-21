@@ -1,13 +1,14 @@
 <template>
     <NavBar></NavBar>
     <HeroSection></HeroSection>
-    <SkillSlider></SkillSlider>
+
 
       
     <!-- Other Sections -->
-    <section id="about" class="min-h-screen bg-gray-700 flex justify-center items-center">
+    <section id="about" class="min-h-screen bg-terciary flex justify-center items-center">
       <h2 class="text-primary text-3xl font-semibold">About Me</h2>
     </section>
+    <SkillSlider></SkillSlider>
 
     <section id="projects" class="min-h-screen bg-terxiary flex justify-center items-center">
       <h2 class="text-richblack text-3xl font-semibold">My projects</h2>

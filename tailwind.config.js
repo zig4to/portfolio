@@ -17,7 +17,6 @@ module.exports = {
       fontFamily: {
         rubik: ["Rubik", "sans-serif"], // Default Font
         satoshi: ["Satoshi", "sans-serif"], // Default font
-        poppins: ["Poppins", "sans-serif"], // Optional font
       },
       borderRadius: {
         xl: "1.5rem", // Custom large rounded corners

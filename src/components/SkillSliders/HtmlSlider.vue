@@ -9,7 +9,7 @@
 
       <!-- Logo Below Progress Bar -->
       <div class="mt-4">
-        <img src="/public/logos/skillslider/html.svg" alt="Logo" class="w-7 h-7 mt-5 object-contain">
+        <img src="/src/assets/logos/skillslider/html.svg" alt="Logo" class="w-7 h-7 mt-5 object-contain">
       </div>
     </div>
   </template>
