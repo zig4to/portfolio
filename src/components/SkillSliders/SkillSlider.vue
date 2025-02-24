@@ -1,9 +1,9 @@
 <template>
-    <div id="skills" class="flex bg-background justify-center items-center h-[380px] w-full">
-      <div class="flex space-x-2 justify-center w-full max-w-6xl py-10">
+    <div id="skills" class="flex-center text-5xl font-medium bg-background pt-7">myskills.</div>
+    <div class="flex bg-background justify-center items-center h-min-fit w-full">
+      <div class="flex justify-center w-full max-w-6xl py-10 space-x-2
+      md:space-x-3 lg:space-x-6">
         <NumberChart />
-
-        <!-- ✅ Ensure this component is used correctly -->
         <HtmlSlider />
         <FigmaSlider />
         <AdobeSlider />

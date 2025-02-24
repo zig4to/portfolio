@@ -5,18 +5,17 @@
         <div class="flex flex-col justify-center bg-highlight m-5">
           <p class="flex flex-col items-center justify-center text-xl font-light mt-5 p-6">hello. I'm Žiga</p>
           <h1 class="
-          text-4xl font-bold text-center
+          text-5xl font-bold text-center
           md:text-6xl md:text-left
           lg:text-8xl 
           text-richblack">
             Building Digital Solutions
         </h1>
         </div>
-
         <!-- Right Column (Image or Additional Content) -->
-        <div class="w-full flex justify-center items-center px-5">
+        <div class="w-full flex justify-center items-center">
           <div class="w-full min-h-[400px] bg-gif flex justify-center items-center">
-          <h1 class="text-6dixl font-bold text-stroke-hero text-transparent">Welcome</h1>
+          <h1 class="text-5xl font-bold text-stroke-hero text-transparent">Welcome</h1>
         </div>
       </div>
       </div>

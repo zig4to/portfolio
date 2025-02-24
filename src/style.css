@@ -55,8 +55,8 @@
 
 @layer utilities {
   /* 🔥 Define Custom Classes */
-  .text-foreground {
-    @apply text-gray-800;
+  .flex-center {
+    @apply flex items-center justify-center;
   }
   .font-custom {
     @apply font-[Rubik] text-gray-900; /* ✅ Fix: Apply Rubik */
@@ -71,5 +71,8 @@
 @layer utilities {
   .text-stroke-hero {
     -webkit-text-stroke: 1px white;
+  }
+  .text-primary-stroke {
+    -webkit-text-stroke: 1px theme("colors.primary");
   }
 }
