@@ -8,7 +8,7 @@
           text-4xl font-bold text-center
           md:text-6xl md:text-left
           lg:text-8xl 
-          text-transparent bg-clip-text bg-cover bg-center" style="background-image: url('/public/fraktal2.jpg') ">
+          text-richblack">
             Building Digital Solutions
         </h1>
         </div>
