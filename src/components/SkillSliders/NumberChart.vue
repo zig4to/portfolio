@@ -4,7 +4,7 @@
     ref="rectangleContainer" 
     class="flex flex-col items-center justify-end mb-4 space-y-1"
     :class="{
-      'mb-18 space-y-1': isSmallScreen,
+      'mb-16 space-y-1': isSmallScreen,
       'md:mb-20 md:space-y-2': isMediumScreen,
       'lg:mb-24 lg:space-y-3': isLargeScreen
     }"

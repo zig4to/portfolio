@@ -19,7 +19,7 @@
       </div>
   
       <!-- Mobile Dropdown Menu -->
-      <div v-if="menuOpen" class="absolute top-16 right-0 w-[200px] bg-highlight opacity-90 shadow-2xl rounded-bl-lg p-4 lg:hidden">
+      <div v-if="menuOpen" class="absolute top-16 right-0 w-[200px] bg-highlight opacity-95 shadow-2xl rounded-bl-lg p-4 lg:hidden">
         <ul class="flex flex-col space-y-4">
           <li v-for="link in links" :key="link.id">
             <a :href="link.href" class="nav-link" @click="toggleMenu">

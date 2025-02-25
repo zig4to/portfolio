@@ -61,6 +61,9 @@
   .font-custom {
     @apply font-[Rubik] text-gray-900; /* ✅ Fix: Apply Rubik */
   }
+  .shadow-custom {
+  @apply bg-gray-100 rounded-2xl shadow-[10px_10px_20px_#c8c8c8,-8px_-8px_16px_#ffffff];
+  }
 }
 
 .bg-gif {
