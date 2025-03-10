@@ -1,8 +1,9 @@
 <template>
     <NavBar></NavBar>
     <HeroSection></HeroSection>
-    <Projects></Projects>
+    <AboutMe></AboutMe>
     <SkillSlider></SkillSlider>
+    <Projects></Projects>
     
   <!-- Other Sections 
   <section id="about" class="min-h-screen bg-terciary flex justify-center items-center">
@@ -26,6 +27,8 @@
   import SkillSlider from "./components/SkillSliders/SkillSlider.vue";
   import Footer from "./components/Footer.vue";
   import Contact from "./components/Contact.vue";
+import AboutMe from "./components/AboutMe.vue";
+import Test from "./components/Test.vue";
 </script>
   
 <style>

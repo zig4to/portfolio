@@ -2,9 +2,9 @@
   <!-- Column Layout for Bar + Logo -->
   <div 
     ref="rectangleContainer" 
-    class="flex flex-col items-center justify-end mb-4 space-y-1"
+    class="flex flex-col items-center justify-end mb-16 space-y-1"
     :class="{
-      'mb-18 space-y-1': isSmallScreen,
+      'space-y-1': isSmallScreen,
       'md:mb-20 md:space-y-2': isMediumScreen,
       'lg:mb-24 lg:space-y-3': isLargeScreen
     }"
@@ -27,8 +27,8 @@
       class="flex items-center justify-start overflow-hidden"
       :class="{
         'h-[180px] w-[2px]': isSmallScreen,
-        'md:h-[365px] md:w-[3px]': isMediumScreen,
-        'lg:h-[520px] lg:w-[4px]': isLargeScreen
+        'md:h-[280px] md:w-[3px]': isMediumScreen,
+        'lg:h-[380px] lg:w-[4px]': isLargeScreen
       }"
     >
       <div 

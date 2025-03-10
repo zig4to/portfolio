@@ -1,10 +1,10 @@
 <template>
-    <section id="contact" class="relative min-h-fit flex flex-col items-center py-20 scroll-mt-16">
+    <section id="contact" class="relative min-h-fit flex flex-col items-center pt-60 pb-40 scroll-mt-16 mt-40 lg:mt-6">
         <!-- Background Image with Opacity -->
         <div class="absolute inset-0 bg-cover bg-center bg-highlight bg-no-repeat opacity-0"></div>
 
         <!-- Title (Centered) -->
-        <div class="relative z-10 text-5xl font-medium text-primary mb-14">
+        <div class="relative z-10 text-5xl lg:text-6xl font-medium text-primary mb-14">
             contact<span class="text-primary-stroke text-transparent">me</span>.
         </div>
 

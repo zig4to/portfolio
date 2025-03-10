@@ -7,8 +7,8 @@
       class="flex items-end justify-start overflow-hidden"
       :class="{
         'h-[200px] w-[20px]': isSmallScreen,
-        'md:h-[400px] md:w-[28px]': isMediumScreen,
-        'lg:h-[600px] lg:w-[50px]': isLargeScreen
+        'md:h-[300px] md:w-[25px]': isMediumScreen,
+        'lg:h-[400px] lg:w-[40px]': isLargeScreen
       }"
     >
       <div 

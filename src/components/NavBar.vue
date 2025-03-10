@@ -1,6 +1,6 @@
 <template>
-    <header class="fixed top-0 left-0 w-full bg-highlight shadow-sm z-50">
-      <div class="container mx-auto flex justify-between items-center h-16 px-6">
+    <header class="fixed top-0 left-0 w-full bg-highlight shadow-sm z-50 ">
+      <div class="container mx-auto flex justify-between items-center h-16 px-6 max-w-[1250px]">
         
         <!-- Logo -->
         <a href="#" class="text-xl font-bold text-primary">MyPortfolio</a>
@@ -37,7 +37,7 @@
   // Navigation Links
   const links = ref([
     { id: 1, text: "Home", href: "#home" },
-    //{ id: 2, text: "About", href: "#about" },
+    { id: 2, text: "About", href: "#about" },
     { id: 3, text: "Skills", href: "#skills" },
     { id: 4, text: "Projects", href: "#projects" },
     { id: 5, text: "Contact", href: "#contact" },
