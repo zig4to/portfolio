@@ -19,7 +19,7 @@
         md:mt-16">
         <div class="bg-gif flex-center w-full min-h-[400px] 
         md:min-h-[250px] 
-        lg:min-h-[400px] lg:my-10 ">
+        lg:min-h-[400px] lg:my-10 lg:rounded-md">
           <h1 class="text-5xl font-bold text-stroke-hero text-transparent">Welcome</h1>
         </div>
       </div>

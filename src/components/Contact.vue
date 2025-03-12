@@ -1,5 +1,5 @@
 <template>
-    <section id="contact" class="relative min-h-fit flex flex-col items-center pt-60 pb-40 scroll-mt-16 mt-40 lg:mt-6">
+    <section id="contact" class="relative min-h-fit flex py-32 flex-col items-center scroll-mt-16 lg:mt-6">
         <!-- Background Image with Opacity -->
         <div class="absolute inset-0 bg-cover bg-center bg-highlight bg-no-repeat opacity-0"></div>
 

@@ -1,8 +1,8 @@
 <template>
-  <section id="skills" class="flex-center flex-col mx-auto text-5xl lg:text-6xl text-primary font-medium bg-background scroll-mt-16 lg:h-screen">
+  <section id="skills" class="flex-center flex-col mx-auto  text-primary bg-background scroll-mt-16 lg:h-screen">
     
     <!-- Title in a single line -->
-    <div class="flex items-center py-5">
+    <div class="flex items-center py-5 text-4xl lg:text-6xl font-medium">
       <span class="text-primary-stroke text-transparent">my</span>
       <span class="text-primary">skills.</span>
     </div>
@@ -23,11 +23,11 @@
 </template>
 
 <script setup>
-import HtmlSlider from "./HtmlSlider.vue"; 
-import FigmaSlider from "./FigmaSlider.vue"; 
-import AdobeSlider from "./AdobeSlider.vue"; 
-import JavaScriptSlider from "./JavaScriptSlider.vue"; 
-import WordpressSlider from "./WordpressSlider.vue"; 
-import WebflowSlider from "./WebflowSlider.vue"; 
-import NumberChart from "./NumberChart.vue";
+import HtmlSlider from "./SkillSliders/HtmlSlider.vue"; 
+import FigmaSlider from "./SkillSliders/FigmaSlider.vue"; 
+import AdobeSlider from "./SkillSliders/AdobeSlider.vue"; 
+import JavaScriptSlider from "./SkillSliders/JavaScriptSlider.vue"; 
+import WordpressSlider from "./SkillSliders/WordpressSlider.vue"; 
+import WebflowSlider from "./SkillSliders/WebflowSlider.vue"; 
+import NumberChart from "./SkillSliders/NumberChart.vue";
 </script>

@@ -1,9 +1,6 @@
 <template>
     <footer class="w-full bg-highlight shadow-inner relative">
       <div class="container mx-auto flex flex-col items-center h-auto px-6 py-6">
-        
-        <!-- Footer Logo -->
-        <a href="#" class="text-lg font-bold text-primary mb-4">MyPortfolio</a>
   
         <!-- Footer Navigation -->
         <nav class="flex flex-col space-y-2 text-center">
@@ -55,7 +52,7 @@
   // Footer Links
   const links = ref([
     { id: 1, text: "Home", href: "#home" },
-    //{ id: 2, text: "About", href: "#about" },
+    { id: 2, text: "Aboutme", href: "#about" },
     { id: 3, text: "Skills", href: "#skills" },
     { id: 4, text: "Projects", href: "#projects" },
     { id: 5, text: "Contact", href: "#contact" },
