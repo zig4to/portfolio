@@ -25,7 +25,7 @@
 
     <!-- Logo Below Progress Bar -->
     <div class="mt-4">
-      <img src="/src/assets/logos/skillslider/javascript.svg" alt="Logo" class="w-7 h-7 mt-5
+      <img src="/src/assets/logos/skillslider/javascript-white.svg" alt="Logo" class="w-7 h-7 mt-5
       md:w-9 md:h-9 
       lg:w-14 lg:h-14 object-contain">
     </div>
@@ -69,7 +69,7 @@ setup() {
                   rectangle.value.style.height = "30%"; // Large screen height
                 }
               }
-            }, 1600);
+            }, 1200);
           }
         });
       },

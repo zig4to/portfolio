@@ -12,7 +12,7 @@
     
     <!-- Top Text (100) -->
     <div 
-      class="font-semibold"
+      class="font-semibold text-bela"
       :class="{
         'text-[9px]': isSmallScreen,
         'md:text-[12px]': isMediumScreen,
@@ -33,7 +33,7 @@
     >
       <div 
         ref="rectangle" 
-        class="bg-[#002C41] opacity-85 transition-all duration-[3000ms]"
+        class="bg-bela opacity-85 transition-all duration-[3000ms]"
         :class="{
           'h-[0px] w-full': true // Start hidden and animate in
         }"
@@ -42,7 +42,7 @@
 
     <!-- Bottom Text (10) -->
     <div 
-      class="font-semibold"
+      class="font-semibold text-bela"
       :class="{
         'text-[9px]': isSmallScreen,
         'md:text-[12px]': isMediumScreen,

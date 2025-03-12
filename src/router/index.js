@@ -1,16 +1,15 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 // Import your pages
-import Home from '../views/Home.vue';
-import MoreProjects from '../views/MoreProjects.vue';
+import HomePage from '../views/Home.vue';
 
 const routes = [
-  { path: '/', component: Home },  // Homepage
-  { path: '/projects', component: MoreProjects }
+  { path: '/', name: 'HomePage', component: HomePage },
+  { path: '/:catchAll(.*)', redirect: '/' }, // Redirect unknown routes to home
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(), // ✅ Use hash mode for GitHub Pages compatibility
   routes
 });
 

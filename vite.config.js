@@ -15,6 +15,6 @@ export default defineConfig({
     host: "0.0.0.0", // Allows access from external networks (ngrok, LAN, etc.)
     port: 5173, // Default Vite port
     strictPort: true, // Ensures Vite always runs on this port
-    allowedHosts: ["324d-188-197-38-190.ngrok-free.app"], // Replace with your actual ngrok URL
+    allowedHosts: ["e06e-89-142-14-115.ngrok-free.app"], // Replace with your actual ngrok URL
   },
 });

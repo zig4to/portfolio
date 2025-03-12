@@ -1,5 +1,5 @@
 <template>
-  <div id="projects" class="container mx-auto px-5 py-8 scroll-mt-16 -mb-80 max-w-[900px] my-12">
+  <div id="projects" class="container bg-modernblack mx-auto px-5 py-8 scroll-mt-16 -mb-80 max-w-[900px] my-12">
     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-10 lg:space-y-20 text-center w-full place-items-center"> 
 
       <!-- Row 1 -->
@@ -13,7 +13,7 @@
       </div>
 
       <!-- Row 2 -->
-      <div class="flex justify-center shadow-custom mx-auto w-full max-w-[400px] aspect-[3/2] sm:mx-4 rounded-lg relative md:-top-24 img-slide-left">
+      <div class="flex justify-center mx-auto w-full max-w-[400px] aspect-[3/2] sm:mx-4 rounded-lg relative md:-top-24 img-slide-left">
         <img src="/src/assets/images/projects/image4.png" alt="Description" class="w-full h-full object-cover rounded-md">
       </div> 
       <div class="text-5xl font-bold md:self-start text-gray-900 md:text-7xl lg:text-8xl">

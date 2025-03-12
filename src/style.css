@@ -67,7 +67,7 @@
 }
 
 .bg-gif {
-  background: url('/src/assets/images/hero/testnigif.gif') no-repeat center center;
+  background: url('/src/assets/images/hero/testnigif3.gif') no-repeat center center;
   background-size: cover;
 }
 
@@ -75,7 +75,13 @@
   .text-stroke-hero {
     -webkit-text-stroke: 1px white;
   }
-  .text-primary-stroke {
-    -webkit-text-stroke: 1px theme("colors.primary");
+  .text-primary-stroke-light {
+    -webkit-text-stroke: 1px theme("colors.bela");
+    color: transparent;
+  }
+  
+  .text-primary-stroke-dark {
+    -webkit-text-stroke: 1px theme("colors.modernblack");
+    color: transparent;
   }
 }

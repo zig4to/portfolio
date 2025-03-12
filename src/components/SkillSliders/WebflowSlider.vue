@@ -13,11 +13,11 @@
     >
       <div 
         ref="rectangle" 
-        class="bg-[#002C41] opacity-85 transition-all duration-[3000ms] rounded-sm"
+        class="bg-[#006AFF] opacity-85 transition-all duration-[3000ms] rounded-sm"
         :class="{
           'h-[0%] w-[20px]': isSmallScreen,
           'md:h-[0%] md:w-[35px]': isMediumScreen,
-          'lg:h-[0%] lg:w-[50px]': isLargeScreen
+          'lg:h-[0%] lg:w-[40px]': isLargeScreen
         }"
       >
       </div>
@@ -25,7 +25,7 @@
 
     <!-- Logo Below Progress Bar -->
     <div class="mt-4">
-      <img src="/src/assets/logos/skillslider/webflow.svg" alt="Logo" class="w-7 h-7 mt-5
+      <img src="/src/assets/logos/skillslider/logo/webflow.svg" alt="Logo" class="w-7 h-7 mt-5
       md:w-9 md:h-9 
       lg:w-14 lg:h-14 object-contain">
     </div>
@@ -69,7 +69,7 @@ setup() {
                   rectangle.value.style.height = "40%"; // Large screen height
                 }
               }
-            }, 2400);
+            }, 1800);
           }
         });
       },
