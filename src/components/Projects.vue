@@ -12,15 +12,21 @@
             </span>
           </span>
         </div>
-
-        <div class="flex-center mx-auto neon-purple-small w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[100px] img-slide-right ">
+        <div class="flex-center mx-auto neon-glow-small w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[80px] img-slide-right relative group">
           <img src="/src/assets/images/projects/image3.png" alt="Description" class="w-full h-full object-cover rounded-md">
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <p class="text-bela text-2xl font-semibold">Webpage - Dual systems</p>
+          </div>
         </div>
 
         <!-- Row 2 -->
-        <div class="flex-center mx-auto neon-purple-small w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[100px] img-slide-left">
+        <div class="flex-center mx-auto neon-glow-small w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[80px] img-slide-right relative group">
           <img src="/src/assets/images/projects/image4.png" alt="Description" class="w-full h-full object-cover rounded-md">
-        </div> 
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <p class="text-bela text-2xl font-semibold">Webpage - Roomba</p>
+          </div>
+        </div>
+        <!-- Text Design -->
         <div class="hidden md:block text-5xl font-bold md:self-center md:text-7xl lg:text-8xl 2xl:text-9xl">
           <span class="text-primary-stroke-light">design</span>.
         </div>
@@ -30,14 +36,20 @@
           projects
         </div>
 
-        <div class="flex justify-center neon-purple-small mx-auto w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[100px] img2-slide-right">
+        <div class="flex-center mx-auto neon-glow-small w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[80px] img-slide-right relative group">
           <img src="/src/assets/images/projects/image5.png" alt="Description" class="w-full h-full object-cover rounded-md">
-        </div> 
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <p class="text-bela text-2xl font-semibold">Webpage - Halder</p>
+          </div>
+        </div>
 
         <!-- Row 4 -->
-        <div class="flex justify-center mx-auto neon-purple-small w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[100px] img2-slide-left">
-          <img src="/src/assets/images/projects/image7.png" alt="Description" class="w-full h-full object-cover rounded-md">
-        </div> 
+        <div class="flex-center mx-auto neon-glow-small w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[80px] img-slide-right relative group">
+          <img src="/src/assets/images/projects/image6.png" alt="Description" class="w-full h-full object-cover rounded-md">
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <p class="text-bela text-2xl font-semibold">Landing page - Cockta</p>
+          </div>
+        </div>
 
         <div class="flex justify-between items-end w-full md:max-w-[550px] md:aspect-[3/2]">
           <div class="flex items-center">
@@ -45,7 +57,7 @@
           </div> 
           <router-link to="/projects" 
             class="flex neon-text items-center text-lg text-bela pb-10 lg:text-2xl 2xl:text-4xl 
-                  cursor-pointer hover:scale-110 transition-transform duration-300 ease-out">
+                  cursor-pointer">
             <span class="text-4xl font-bold opacity-80 lg:text-4xl 2xl:text-6xl">more</span> projects
           </router-link>
         </div>

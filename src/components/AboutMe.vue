@@ -8,7 +8,7 @@
         <!-- Left Column (Cropped Avatar) -->
         <div class="flex-center md:justify-start">
           <div class="w-[200px] h-[220px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden 
-                     border-purple-500 shadow-[0_0_20px_6px_rgba(168,85,247,0.7)]">
+                     neon-glow-small2">
             <img src="/src/assets/images/aboutme/avatar4.avif" 
                 alt="Profile Image" 
                 class="w-full h-full object-cover object-center">

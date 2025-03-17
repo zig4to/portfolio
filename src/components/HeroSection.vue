@@ -21,7 +21,7 @@
           <div class="bg-gif flex-center w-full min-h-[300px] 
                       md:min-h-[250px] 
                       lg:min-h-[400px] lg:my-10 lg:rounded-xl
-                      neon-purple-small2
+                      neon-glow-small2
                        hover:shadow-[0_0_25px_8px_rgba(168,85,247,0.8)] transition duration-300">
             <h1 class="text-5xl font-bold text-stroke-hero text-transparent">Welcome</h1>
           </div>
