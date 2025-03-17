@@ -1,6 +1,6 @@
 <template>
-  <footer class="w-full bg-modernblack shadow-inner relative">
-    <div class="container mx-auto flex flex-col items-center h-auto px-6 py-6">
+  <footer class="w-full bg-modernblack shadow-inner relative ">
+    <div class="container mx-auto flex flex-col items-center h-auto px-6 py-6  max-w-[1350px]">
       
       <!-- Footer Navigation (Auto Switch: Horizontal for LG+ & Vertical for MD-) -->
       <nav :class="footerClass">
@@ -28,7 +28,7 @@
                   bg-white text-gray-800 text-md px-8 py-3 
                   rounded-3xl shadow-xl min-w-[220px] w-auto"
           >
-            Made by me with
+            Made by me with 
             <img src="/src/assets/logos/footer/vue.svg" 
                 alt="GitHub Logo" 
                 class="w-5 h-5 lg:w-5 lg:h-5 transition-transform hover:scale-110 inline-block">
