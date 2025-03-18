@@ -69,12 +69,12 @@ onMounted(() => {
                   setTimeout(startInfiniteLoop, 5000);
                 },
               });
-            }, 2000);
+            }, 3000);
             return;
           }
         }
 
-        setTimeout(animateText, 2000);
+        setTimeout(animateText, 3000);
       },
     });
   };
@@ -103,6 +103,6 @@ onMounted(() => {
   };
 
   // Start with "Digital" visible for 3 seconds before animation begins
-  setTimeout(animateText, 2000);
+  setTimeout(animateText, 3000);
 });
 </script>
