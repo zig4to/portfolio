@@ -1,10 +1,10 @@
 <template>
-  <header class="fixed text-bela text-lg top-0 left-0 w-full bg-modernblack shadow-sm z-50">
+  <header class="fixed text-bela text-lg top-0 left-0 w-full bg-transparent shadow-sm z-50">
     <div class="container mx-auto flex justify-between items-center h-16 px-6 max-w-[1350px]">
       
       <!-- Logo -->
-      <router-link to="/" class="text-xl text-bela font-bold text-primary" @click="scrollToTop">
-        MyPortfolio.site
+      <router-link to="/" class="text-lg text-bela font-bold text-primary" @click="scrollToTop">
+        site.zigatomse
       </router-link>
 
       <!-- Desktop Navigation (Hidden on Mobile & Tablet) -->
