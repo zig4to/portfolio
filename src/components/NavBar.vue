@@ -1,9 +1,14 @@
 <template>
-  <header class="fixed text-bela text-lg top-0 left-0 w-full bg-transparent shadow-sm z-50">
-    <div class="container mx-auto flex justify-between items-center h-16 px-6 max-w-[1350px]">
+  <header
+  :class="[
+    'fixed top-0 left-0 w-full z-50 bg-modernblack shadow-sm text-bela text-lg transition-transform duration-500',
+    isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
+  ]"
+>
+    <div class="container mx-auto flex justify-between items-center h-16 px-6 lg:max-w-[950px] 2xl:max-w-[1350px]">
       
       <!-- Logo -->
-      <router-link to="/" class="text-lg text-bela font-bold text-primary" @click="scrollToTop">
+      <router-link to="/" class="text-sm md:text-lg text-bela font-bold text-primary" @click="scrollToTop">
         site.zigatomse
       </router-link>
 
@@ -71,13 +76,12 @@ import { useRouter } from "vue-router";
 // Vue Router instance
 const router = useRouter();
 
-// Function to smoothly scroll to the top when clicking "Home"
+// Smooth scroll to top
 const scrollToTop = async (event) => {
-  event.preventDefault(); // Prevent default link behavior
-
+  event.preventDefault();
   if (router.currentRoute.value.path === "/") {
-    await nextTick(); // Ensure reactivity updates
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
+    await nextTick();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   } else {
     router.push("/").then(() => {
       setTimeout(() => {
@@ -87,10 +91,10 @@ const scrollToTop = async (event) => {
   }
 };
 
-// Close menu and scroll when Home is clicked on mobile
+// Close mobile menu and scroll
 const closeMenuAndScroll = (event) => {
   scrollToTop(event);
-  menuOpen.value = false; // Close menu
+  menuOpen.value = false;
 };
 
 // Navigation Links
@@ -108,29 +112,44 @@ const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 };
 
-// Function to close menu when clicking outside
+// Hide navbar on scroll down, show on scroll up
+const isNavbarVisible = ref(true);
+let lastScrollY = window.scrollY;
+
+const handleScroll = () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY && currentScrollY > 100) {
+    isNavbarVisible.value = false; // hide
+  } else {
+    isNavbarVisible.value = true; // show
+  }
+
+  lastScrollY = currentScrollY;
+};
+
+// Close menu if clicking outside
 const closeMenuOnClickOutside = (event) => {
   const menu = document.getElementById("mobile-menu");
   const button = document.getElementById("menu-button");
-
   if (menuOpen.value && menu && !menu.contains(event.target) && button !== event.target) {
     menuOpen.value = false;
   }
 };
 
-// Add event listener when the component is mounted
+// Lifecycle hooks
 onMounted(() => {
   document.addEventListener("click", closeMenuOnClickOutside);
+  document.addEventListener("scroll", handleScroll);
 });
 
-// Remove event listener when component is unmounted
 onUnmounted(() => {
   document.removeEventListener("click", closeMenuOnClickOutside);
+  document.removeEventListener("scroll", handleScroll);
 });
 </script>
 
 <style scoped>
-/* 🔹 Navigation Link Styling */
 .nav-link {
   @apply transition duration-300 block px-4 py-2;
 }

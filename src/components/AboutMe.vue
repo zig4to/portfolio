@@ -7,21 +7,20 @@
           </h2>
         <!-- Left Column (Cropped Avatar) -->
         <div class="flex-center md:justify-start">
-          <div class="w-[200px] h-[220px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden 
-                     neon-glow-small2">
-            <img src="/src/assets/images/aboutme/avatar4.avif" 
+          <div class="w-[150px] h-[180px] md:w-[250px] md:h-[280px] lg:w-[400px] lg:h-[400px] rounded-b-[200px] overflow-hidden">
+            <img src="/src/assets/images/aboutme/avatar1.png" 
                 alt="Profile Image" 
-                class="w-full h-full object-cover object-center">
+                class="w-full h-full object-cover object-center opacity-90">
           </div>
         </div>
 
         <!-- Right Column (Text Content) -->
-        <div class="text-center md:text-left font-light lg:leading-[1.1] lg:text-[30px] 2xl:space-y-14 text-lg text-bela max-w-xl md:max-w-md lg:max-w-2xl mx-auto space-y-8">
+        <div class="text-center md:text-left font-light lg:leading-[1.1] lg:text-[25px] 2xl:space-y-14 text-lg text-bela max-w-xl md:max-w-md lg:max-w-2xl mx-auto space-y-8">
           <h2 class="about-me-title text-5xl lg:text-7xl font-medium text-bela hidden md:block">
             About <span class="text-primary-stroke-light">me</span>
           </h2>
 
-          <p class="animated-text">
+          <p class="animated-text text">
             <span>I am passionate about web development and eager to create modern and user-friendly websites.</span>
           </p>
           <p class="animated-text">
@@ -51,15 +50,15 @@ export default {
       // Animate "About Me" heading (Slide from Right)
       gsap.fromTo(
         ".about-me-title",
-        { opacity: 0, x: 100 }, // Start off-screen to the right
+        { opacity: 0, y: 80 }, // 👈 Slide up from bottom
         {
           opacity: 1,
-          x: 0, // Slide into position
-          duration: 1.5,
+          y: 0, // Settle into place
+          duration: 1,
           ease: "power2.out",
           scrollTrigger: {
             trigger: ".about-me-title",
-            start: "top 80%", // Starts when 80% of the element is in viewport
+            start: "top 90%", // Triggers when element hits 80% of viewport
             toggleActions: "play none none none",
           },
         }
@@ -80,7 +79,7 @@ export default {
             ease: "power2.out",
             scrollTrigger: {
               trigger: textBlock,
-              start: "top 85%", // Animation starts when in viewport
+              start: "top 80%", // Animation starts when in viewport
               toggleActions: "play none none none",
             },
           }

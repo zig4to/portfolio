@@ -12,18 +12,21 @@
             </span>
           </span>
         </div>
-        <div class="flex-center mx-auto neon-glow-small w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[80px] img-slide-right relative group">
-          <img src="/src/assets/images/projects/image3.png" alt="Description" class="w-full h-full object-cover rounded-md">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <p class="text-bela text-2xl font-semibold">Webpage - Dual systems</p>
+        <div class="flex-center mx-auto neon-glow-small img-animate w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[80px] relative group">
+          <img src="/src/assets/images/projects/3dgarage.png" alt="Description" class="w-full h-full object-cover rounded-md">
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <p class="text-bela text-2xl font-semibold">Webstore - 3DGarage</p>
+            <p class="text-bela text-lg font-semibold">offline</p>
           </div>
+
         </div>
 
         <!-- Row 2 -->
-        <div class="flex-center mx-auto neon-glow-small w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[80px] img-slide-right relative group">
-          <img src="/src/assets/images/projects/image4.png" alt="Description" class="w-full h-full object-cover rounded-md">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <p class="text-bela text-2xl font-semibold">Webpage - Roomba</p>
+        <div class="flex-center mx-auto neon-glow-small img-animate w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[80px] relative group">
+          <img src="/src/assets/images/projects/janez.png" alt="Description" class="w-full h-full object-cover rounded-md">
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <p class="text-bela text-2xl font-semibold">Webpage for Painting company</p>
+            <p class="text-bela text-lg font-semibold">offline</p>
           </div>
         </div>
         <!-- Text Design -->
@@ -36,18 +39,19 @@
           projects
         </div>
 
-        <div class="flex-center mx-auto neon-glow-small w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[80px] img-slide-right relative group">
-          <img src="/src/assets/images/projects/image5.png" alt="Description" class="w-full h-full object-cover rounded-md">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <p class="text-bela text-2xl font-semibold">Webpage - Halder</p>
+        <div class="flex-center mx-auto neon-glow-small img-animate w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[80px] img-slide-right relative group">
+          <img src="/src/assets/images/projects/business.png" alt="Description" class="w-full h-full object-cover rounded-md">
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <p class="text-bela text-2xl font-semibold">Webpage for personal business</p>
+            <p class="text-bela text-md font-semibold">Work in progress</p>
           </div>
         </div>
 
         <!-- Row 4 -->
-        <div class="flex-center mx-auto neon-glow-small w-full max-w-[400px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[80px] img-slide-right relative group">
-          <img src="/src/assets/images/projects/image6.png" alt="Description" class="w-full h-full object-cover rounded-md">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <p class="text-bela text-2xl font-semibold">Landing page - Cockta</p>
+        <div class="flex-center mx-auto neon-glow-small img-animate w-full max-w-[250px] 2xl:max-w-[500px] aspect-[3/2] sm:mx-4 rounded-[60px] img-slide-right relative group">
+          
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex-center opacity-0 rounded-[60px] transition-opacity duration-300 group-hover:opacity-100">
+            <p class="text-bela text-2xl 2xl:text-4xl font-medium">More projects coming soon...</p>
           </div>
         </div>
 
@@ -82,31 +86,28 @@ export default {
     onMounted(() => {
       gsap.registerPlugin(ScrollTrigger);
 
-      // Function to animate images sliding from the bottom
-      const animateImagesFromBottom = (selector) => {
+      // Vse slike z razredom .img-animate
+      const imageBoxes = document.querySelectorAll(".img-animate");
+
+      imageBoxes.forEach((box) => {
         gsap.fromTo(
-          selector,
-          { y: 200, opacity: 0, visibility: "visible" }, // Start from below
+          box,
+          { y: 150, opacity: 0 },
           {
-            y: 0, // Move to normal position
-            opacity: 1, // Fade in
-            duration: 2, // Animation duration
-            ease: "power2.out", // Smooth easing
+            y: 0,
+            opacity: 1,
+            duration: 1.2,
+            ease: "power3.out",
             scrollTrigger: {
-              trigger: selector,
-              start: "top 80%", // Start when 80% in viewport
-              toggleActions: "play none none none", // Only play once
+              trigger: box,
+              start: "top 80%",
+              toggleActions: "play none none none",
             },
           }
         );
-      };
-
-      // Apply animation to all images
-      animateImagesFromBottom(".img-slide-right");
-      animateImagesFromBottom(".img-slide-left");
-      animateImagesFromBottom(".img2-slide-right");
-      animateImagesFromBottom(".img2-slide-left");
+      });
     });
   },
 };
+
 </script>

@@ -11,9 +11,12 @@
 
       <!-- Social Icons -->
       <div class="flex space-x-4 mt-4 relative">
+        <p class="text-sm text-center text-bela mt-2">
+          © 2025 site.zigatomse. All rights reserved.
+        </p>
         <!-- Bird Icon (Clickable) -->
         <div 
-          class="text-bela hover:text-bela text-3xl cursor-pointer select-none"
+          class="text-bela hover:text-bela text-2xl cursor-pointer select-none"
           @click="showCloud"
         >
           🐦

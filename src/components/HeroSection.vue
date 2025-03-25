@@ -1,11 +1,11 @@
 <template>
   <section id="home" class="flex-center bg-modernblack min-h-fit lg:min-h-screen relative overflow-hidden">
     <!-- Content -->
-    <div class="container relative z-10 mx-auto grid grid-cols-1 md:grid-cols-2 items-center p-6 max-w-[500px] md:max-w-[750px] lg:max-w-[950px] xl:max-w-[1350px] md:min-h-[500px]">
+    <div class="container relative z-10 mx-auto grid grid-cols-1 md:grid-cols-2 items-center p-6 max-w-[500px] md:max-w-[750px] lg:max-w-[950px] 2xl:max-w-[1350px] md:min-h-[500px]">
       <!-- Left Column (Text Content) -->
       <div class="flex flex-col justify-center text-bela my-10 md:mt-18">
         <p class="flex text-center flex-col text-xl font-light py-6 ml-1
-        md:text-left md:text-2xl 2xl:text-3xl">hello. I'm Žiga</p>
+        md:text-left md:text-2xl 2xl:text-3xl">Hello. I'm Žiga</p>
         <h1 class="
         text-5xl font-bold text-center
         md:text-6xl md:text-left
@@ -22,8 +22,7 @@
         <div class="bg-gif flex-center w-full min-h-[300px] 
                     md:min-h-[250px] 
                     lg:min-h-[400px] lg:my-10 lg:rounded-xl
-                    neon-glow-small2
-                     hover:shadow-[0_0_25px_8px_rgba(168,85,247,0.8)] transition duration-300">
+                    neon-glow-small2">
           <h1 class="text-5xl font-bold text-stroke-hero text-transparent">Welcome</h1>
         </div>
       </div>
