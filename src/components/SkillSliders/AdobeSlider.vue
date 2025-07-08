@@ -8,7 +8,8 @@
       :class="{
         'h-[200px] w-[20px]': isSmallScreen,
         'md:h-[300px] md:w-[25px]': isMediumScreen,
-        'lg:h-[400px] lg:w-[40px]': isLargeScreen
+        'lg:h-[300px] lg:w-[30px]': isLargeScreen,
+        'xl:h-[400px] xl:w-[40px]': isXLargeScreen
       }"
     >
       <div 
@@ -16,8 +17,9 @@
         class="bg-[#38BDF8] opacity-85 transition-all duration-[3000ms] rounded-sm"
         :class="{
           'h-[0%] w-[20px]': isSmallScreen,
-          'md:h-[0%] md:w-[35px]': isMediumScreen,
-          'lg:h-[0%] lg:w-[50px]': isLargeScreen
+          'md:h-[0%] md:w-[25px]': isMediumScreen,
+          'lg:h-[0%] lg:w-[35px]': isLargeScreen,
+          'xl:h-[0%] xl:w-[40px]': isXLargeScreen
         }"
       >
       </div>
@@ -25,9 +27,12 @@
 
     <!-- Logo Below Progress Bar -->
     <div class="mt-4">
-      <img src="/src/assets/logos/skillslider/logo/tailwind.svg" alt="Logo" class="w-7 h-7 mt-5
-      md:w-9 md:h-9 
-      lg:w-14 lg:h-14 object-contain">
+      <img src="/src/assets/logos/skillslider/logo/tailwind.svg" 
+      alt="Logo" 
+        class="w-7 h-7 mt-5
+               md:w-9 md:h-9 
+               lg:w-12 lg:h-12 
+               xl:w-14 xl:h-14 object-contain">
     </div>
   </div>
 </template>
@@ -43,50 +48,58 @@ setup() {
 
   // 🔥 Compute screen breakpoints
   const isSmallScreen = computed(() => screenWidth.value < 768);
-  const isMediumScreen = computed(() => screenWidth.value >= 768 && screenWidth.value < 1024);
-  const isLargeScreen = computed(() => screenWidth.value >= 1024);
+    const isMediumScreen = computed(() => screenWidth.value >= 768 && screenWidth.value < 1024);
+    const isLargeScreen = computed(() => screenWidth.value >= 1024 && screenWidth.value < 1280);
+    const isXLargeScreen = computed(() => screenWidth.value >= 1280);
 
   // Function to update screen width
   const updateScreenSize = () => {
-    screenWidth.value = window.innerWidth;
-  };
+      screenWidth.value = window.innerWidth;
+    };
 
-  // Observe intersection and animate progress bar
-  onMounted(() => {
-    window.addEventListener("resize", updateScreenSize);
+    onMounted(() => {
+      window.addEventListener("resize", updateScreenSize);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              if (rectangle.value) {
-                if (isSmallScreen.value) {
-                  rectangle.value.style.height = "45%"; // Mobile height
-                } else if (isMediumScreen.value) {
-                  rectangle.value.style.height = "45%"; // Tablet height
-                } else if (isLargeScreen.value) {
-                  rectangle.value.style.height = "45%"; // Large screen height
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                if (rectangle.value) {
+                  if (isSmallScreen.value) {
+                    rectangle.value.style.height = "40%";
+                  } else if (isMediumScreen.value) {
+                    rectangle.value.style.height = "40%";
+                  } else if (isLargeScreen.value) {
+                    rectangle.value.style.height = "40%";
+                  } else if (isXLargeScreen.value) {
+                    rectangle.value.style.height = "40%";
+                  }
                 }
-              }
-            }, 900);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+              }, 1800);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
 
-    if (rectangleContainer.value) {
-      observer.observe(rectangleContainer.value);
-    }
-  });
+      if (rectangleContainer.value) {
+        observer.observe(rectangleContainer.value);
+      }
+    });
 
-  // Cleanup event listener on unmount
-  onUnmounted(() => {
-    window.removeEventListener("resize", updateScreenSize);
-  });
+    onUnmounted(() => {
+      window.removeEventListener("resize", updateScreenSize);
+    });
 
-  return { rectangle, rectangleContainer, isSmallScreen, isMediumScreen, isLargeScreen };
-},
+    return {
+      rectangle,
+      rectangleContainer,
+      isSmallScreen,
+      isMediumScreen,
+      isLargeScreen,
+      isXLargeScreen
+    };
+  },
 };
 </script>

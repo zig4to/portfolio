@@ -1,18 +1,30 @@
 <template>
-  <div class="bg-modernblack w-full">
-    <div id="about" class="mx-auto p-8 scroll-mt-16 max-w-[800px] lg:max-w-[1200px] lg:h-screen-fit">
+  <div  id="about" class="relative flex-center flex-col items-center bg-modernblack min-h-fit py-32 px-8 scroll-mt-16">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center text-center gap-10">
-        <h2 class="about-me-title text-5xl lg:text-7xl font-medium text-bela md:hidden">
+        <h2 class="about-me-title text-4xl lg:text-5xl xl:text-7xl font-medium text-bela md:hidden">
             About <span class="text-primary-stroke-light">me</span>
           </h2>
         <!-- Left Column (Cropped Avatar) -->
-        <div class="flex-center md:justify-start">
-          <div class="w-[150px] h-[180px] md:w-[250px] md:h-[280px] lg:w-[400px] lg:h-[400px] rounded-b-[200px] overflow-hidden">
+        <!-- Avatar 2: visible on md and up, hidden on small -->
+        <div class="hidden md:flex md:justify-center ml-20">
+          <div class="w-[150px] h-[180px] md:w-[250px] md:h-[280px] lg:w-[280px] lg:h-[400px] xl:w-[280px] xl:h-[400px] overflow-hidden rounded-md">
             <img src="/src/assets/images/aboutme/avatar1.png" 
                 alt="Profile Image" 
-                class="w-full h-full object-cover object-center opacity-90">
+                class="w-full h-full object-cover object-center opacity-75">
           </div>
         </div>
+
+        <!-- Avatar 4: visible only on small screens -->
+        <div class="flex md:hidden justify-center">
+          <div class="w-[150px] h-[180px] overflow-hidden">
+            <img src="/src/assets/images/aboutme/avatar4.png" 
+                alt="Profile Image" 
+                class="w-full h-full object-cover object-center opacity-70 animate-spin " 
+                style="animation-duration: 50s">
+          </div>
+        </div>
+
+
 
         <!-- Right Column (Text Content) -->
         <div class="text-center md:text-left font-light lg:leading-[1.1] lg:text-[25px] 2xl:space-y-14 text-lg text-bela max-w-xl md:max-w-md lg:max-w-2xl mx-auto space-y-8">
@@ -31,8 +43,6 @@
             expanding my skills in design tools like <strong>Figma</strong> to enhance my projects.</span>
           </p>
         </div>
-
-      </div>
     </div>
   </div>
 </template>

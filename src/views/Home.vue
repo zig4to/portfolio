@@ -12,7 +12,6 @@
   import SkillSlider from '../components/SkillSlider.vue'; // Fixed the component import
   import Projects from '../components/Projects.vue';
   import Contact from '../components/Contact.vue';
-  import VuePoligon from '../components/VuePoligon.vue';
 
   export default {
     components: {
@@ -21,7 +20,6 @@
       SkillSlider,
       Projects,
       Contact,
-      VuePoligon,
     }
   };
   </script>

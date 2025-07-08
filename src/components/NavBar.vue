@@ -1,18 +1,22 @@
 <template>
   <header
-  :class="[
-    'fixed top-0 left-0 w-full z-50 bg-modernblack shadow-sm text-bela text-lg transition-transform duration-500',
-    isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
-  ]"
->
+    :class="[
+      'fixed top-0 left-0 w-full z-50 bg-modernblack shadow-sm text-bela text-lg transition-transform duration-500',
+      isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
+    ]"
+  >
     <div class="container mx-auto flex justify-between items-center h-16 px-6 lg:max-w-[950px] 2xl:max-w-[1350px]">
       
       <!-- Logo -->
-      <router-link to="/" class="text-sm md:text-lg text-bela font-bold text-primary" @click="scrollToTop">
+      <router-link
+        to="/"
+        class="text-sm md:text-lg font-bold text-primary"
+        @click="scrollToTop"
+      >
         site.zigatomse
       </router-link>
 
-      <!-- Desktop Navigation (Hidden on Mobile & Tablet) -->
+      <!-- Desktop Navigation -->
       <nav class="hidden lg:flex space-x-6">
         <template v-for="link in links" :key="link.id">
           <router-link
@@ -34,7 +38,11 @@
       </nav>
 
       <!-- Mobile Menu Button -->
-      <button id="menu-button" @click="toggleMenu" class="lg:hidden text-2xl">
+      <button
+        id="menu-button"
+        @click="toggleMenu"
+        class="lg:hidden text-2xl"
+      >
         ☰
       </button>
     </div>
@@ -69,14 +77,28 @@
   </header>
 </template>
 
+
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from "vue";
 import { useRouter } from "vue-router";
 
-// Vue Router instance
 const router = useRouter();
+const menuOpen = ref(false);
+const isNavbarVisible = ref(true);
+let lastScrollY = window.scrollY;
 
-// Smooth scroll to top
+const links = ref([
+  { id: 1, text: "Home", href: "/" },
+  { id: 2, text: "About", href: "#about" },
+  { id: 3, text: "Skills", href: "#skills" },
+  { id: 4, text: "Projects", href: "#projects" },
+  { id: 5, text: "Contact", href: "#contact" },
+]);
+
+const toggleMenu = () => {
+  menuOpen.value = !menuOpen.value;
+};
+
 const scrollToTop = async (event) => {
   event.preventDefault();
   if (router.currentRoute.value.path === "/") {
@@ -91,44 +113,17 @@ const scrollToTop = async (event) => {
   }
 };
 
-// Close mobile menu and scroll
 const closeMenuAndScroll = (event) => {
   scrollToTop(event);
   menuOpen.value = false;
 };
 
-// Navigation Links
-const links = ref([
-  { id: 1, text: "Home", href: "/" },
-  { id: 2, text: "About", href: "#about" },
-  { id: 3, text: "Skills", href: "#skills" },
-  { id: 4, text: "Projects", href: "#projects" },
-  { id: 5, text: "Contact", href: "#contact" },
-]);
-
-// Mobile Menu State
-const menuOpen = ref(false);
-const toggleMenu = () => {
-  menuOpen.value = !menuOpen.value;
-};
-
-// Hide navbar on scroll down, show on scroll up
-const isNavbarVisible = ref(true);
-let lastScrollY = window.scrollY;
-
 const handleScroll = () => {
   const currentScrollY = window.scrollY;
-
-  if (currentScrollY > lastScrollY && currentScrollY > 100) {
-    isNavbarVisible.value = false; // hide
-  } else {
-    isNavbarVisible.value = true; // show
-  }
-
+  isNavbarVisible.value = currentScrollY < lastScrollY || currentScrollY <= 100;
   lastScrollY = currentScrollY;
 };
 
-// Close menu if clicking outside
 const closeMenuOnClickOutside = (event) => {
   const menu = document.getElementById("mobile-menu");
   const button = document.getElementById("menu-button");
@@ -137,7 +132,6 @@ const closeMenuOnClickOutside = (event) => {
   }
 };
 
-// Lifecycle hooks
 onMounted(() => {
   document.addEventListener("click", closeMenuOnClickOutside);
   document.addEventListener("scroll", handleScroll);
@@ -148,6 +142,7 @@ onUnmounted(() => {
   document.removeEventListener("scroll", handleScroll);
 });
 </script>
+
 
 <style scoped>
 .nav-link {
